@@ -1,0 +1,16 @@
+﻿  task1mp.cpp
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(73): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(74): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(84): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(85): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(94): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(192): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(263): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(264): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  1 of 624 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  task1 mp.vcxproj -> C:\Users\Maher\OneDrive - Oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\x64\Release\task1 mp.exe

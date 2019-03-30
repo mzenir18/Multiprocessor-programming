@@ -1,0 +1,9 @@
+﻿  task1mp.cpp
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(73): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(74): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(84): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(85): warning C4018: '<=': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(94): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(183): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  task1 mp.vcxproj -> C:\Users\Maher\OneDrive - Oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\Debug\task1 mp.exe

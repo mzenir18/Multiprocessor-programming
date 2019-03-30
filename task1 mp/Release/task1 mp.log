@@ -1,0 +1,16 @@
+﻿  task1mp.cpp
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(215): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(216): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(325): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(326): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\onedrive - oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\task1 mp\task1mp.cpp(483): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=unsigned char
+          ]
+  Generating code
+  1 of 610 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  task1 mp.vcxproj -> C:\Users\Maher\OneDrive - Oulun yliopisto\multiprocessing\multiprocessing task1\task1 mp\Release\task1 mp.exe
