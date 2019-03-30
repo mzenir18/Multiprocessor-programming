@@ -1,0 +1,12 @@
+﻿  Main.cpp
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(230): warning C4018: '<': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(238): warning C4018: '<': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(274): warning C4018: '>': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(279): warning C4018: '>': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(300): warning C4018: '>': signed/unsigned mismatch
+  Generating code
+  0 of 521 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  MPP_thread_implementation.vcxproj -> C:\Users\Zii\Documents\Visual Studio Projects\MPP_thread_implementation\Release\MPP_thread_implementation.exe

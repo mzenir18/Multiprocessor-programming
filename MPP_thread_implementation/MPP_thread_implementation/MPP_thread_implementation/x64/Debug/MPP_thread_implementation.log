@@ -1,0 +1,17 @@
+﻿  lodepng.cpp
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\lodepng.cpp(3388): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\lodepng.cpp(4337): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Main.cpp
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(140): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(141): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(230): warning C4018: '<': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(238): warning C4018: '<': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(274): warning C4018: '>': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(279): warning C4018: '>': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(300): warning C4018: '>': signed/unsigned mismatch
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(421): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(422): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(429): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_thread_implementation\mpp_thread_implementation\main.cpp(430): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  MPP_thread_implementation.vcxproj -> C:\Users\Zii\Documents\Visual Studio Projects\MPP_thread_implementation\x64\Debug\MPP_thread_implementation.exe
