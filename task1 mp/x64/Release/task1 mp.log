@@ -1,21 +1,18 @@
-﻿  lodepng.cpp
-c:\users\maher\desktop\mpp git1\task1 mp\lodepng.cpp(3388): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-c:\users\maher\desktop\mpp git1\task1 mp\lodepng.cpp(4337): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
-  task1mp.cpp
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(218): warning C4018: '<': signed/unsigned mismatch
+﻿  task1mp.cpp
 c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(219): warning C4018: '<': signed/unsigned mismatch
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(328): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(220): warning C4018: '<': signed/unsigned mismatch
 c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(329): warning C4018: '<': signed/unsigned mismatch
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(486): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(331): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(490): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
           with
           [
               _Ty=unsigned char
           ]
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(538): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(539): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(542): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(543): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Generating code
-  604 of 610 functions (99.0%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
+  1 of 610 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   task1 mp.vcxproj -> C:\Users\Maher\Desktop\mpp git1\x64\Release\task1 mp.exe

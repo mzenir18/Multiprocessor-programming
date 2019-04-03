@@ -27,7 +27,7 @@ const char *FILE_R2L = "Images/right_on_left.png";
 const char *FILE_CROSS_CHECKED = "Images/cross_checked.png";
 const char *FILE_OCCLUSION_FILLED = "Images/occlusion_filled.png";
 const int M = 16; // Downsampling factor
-int WIN_SIZE = 9; // Window size
+int WIN_SIZE = 9;//windowsize
 int N = 4;
 unsigned MAX_DISP = (unsigned)260 / 4; // Initial value provided in "calib.txt"
 const int THRESHOLD = 8 * 256 / 65; // Threshold used on cross check (mapped)
@@ -161,12 +161,12 @@ int main()
 	for (auto&& v : img2.gray2D) ir.emplace_back(std::begin(v), std::end(v));
 	
 //ZNCC Algorithm img1.height-9	img1.width-9
-#pragma omp parallel for collapse(2)
-	for (unsigned j = 0; j < img1.height - 9; j++) {
+#pragma omp parallel for collapse(2) num_threads(10)schedule(static, 3)
+	for (unsigned j = 0; j < img1.height - WIN_SIZE; j++) {
 		vector<unsigned char> temp;
 		
 		//cout << img1.height << endl;
-		for (unsigned i = 0; i < img1.width - 9; i++) {
+		for (unsigned i = 0; i < img1.width -WIN_SIZE; i++) {
 			current_max_sum = -2;
 			
 
@@ -186,7 +186,7 @@ int main()
 				for (unsigned Win_Y = j; Win_Y < WIN_SIZE +j; Win_Y++) {
 
 					for (unsigned Win_X = i+d; Win_X < WIN_SIZE +i+d; Win_X++) {
-						if ((Win_Y + 8 >= img1.height - 9) || ((Win_X + 8 >= img1.width - 9))) {
+						if ((Win_Y + 8 >= img1.height - WIN_SIZE) || ((Win_X + 8 >= img1.width - WIN_SIZE))) {
 							exr = 1;
 							break;
 						}
@@ -202,8 +202,8 @@ int main()
 						break;
 					}
 				}
-				window_mean_1 = sum_1 / 81;
-				window_mean_2 = sum_2 / 81;
+				window_mean_1 = sum_1 /( WIN_SIZE* WIN_SIZE);
+				window_mean_2 = sum_2 / (WIN_SIZE* WIN_SIZE);
 				
 				
 				
@@ -215,9 +215,9 @@ int main()
 						//calcualte the ZNCC Value for each Window
 				//Zncc_value = ZNCC_formula(i, j, 9, img1.gray2D, img2.gray2D, window_mean_1, window_mean_2, d);
 
-				
-				 for (int zj = j; zj < 9 + j; zj++) {
-					 for (int zi = i + d; zi < 9 + i + d; zi++) {
+#pragma omp parallel for collapse(2) num_threads(4)  schedule(static, 3)
+				 for (int zj = j; zj < WIN_SIZE + j; zj++) {
+					 for (int zi = i + d; zi < WIN_SIZE + i + d; zi++) {
 						 k += (il[zj][zi] - window_mean_1)*(ir[zj][zi - d] - window_mean_2);
 						 p += pow((il[zj][zi] - window_mean_1), 2);
 						 m += pow((ir[zj][zi - d] - window_mean_2), 2);
@@ -269,12 +269,12 @@ int main()
 	}
 	//zncc2
 	exr = 0;
-#pragma omp parallel for collapse(2)
-	for (unsigned j = 0; j < img1.height - 9; j++) {
+#pragma omp parallel for collapse(2)  num_threads(4) schedule(static, 3)
+	for (unsigned j = 0; j < img1.height - WIN_SIZE; j++) {
 		
 		vector<unsigned char> temp_2;
 		//cout << img1.height << endl;
-		for (unsigned i = 0; i < img1.width - 9; i++) {
+		for (unsigned i = 0; i < img1.width - WIN_SIZE; i++) {
 			
 			current_max_sum_2 = -2;
 
@@ -293,7 +293,7 @@ int main()
 				for (unsigned Win_Y = j; Win_Y < WIN_SIZE + j; Win_Y++) {
 
 					for (unsigned Win_X = i - d; Win_X < WIN_SIZE + i - d; Win_X++) {
-						if ((Win_Y + 8 >= img1.height - 9) || ((Win_X + 8 >= img1.width - 9))) {
+						if ((Win_Y + WIN_SIZE-1 >= img1.height - WIN_SIZE) || ((Win_X + WIN_SIZE-1 >= img1.width - WIN_SIZE))) {
 							exr = 1;
 							break;
 						}
@@ -313,8 +313,8 @@ int main()
 					}
 				}
 				
-				window_mean_3 = sum_3 / 81;
-				window_mean_4 = sum_4 / 81;
+				window_mean_3 = sum_3 / (WIN_SIZE* WIN_SIZE);
+				window_mean_4 = sum_4 / (WIN_SIZE* WIN_SIZE);
 
 
 
@@ -325,9 +325,10 @@ int main()
 				//calcualte the ZNCC Value for each Window
 		//Zncc_value = ZNCC_formula(i, j, 9, img1.gray2D, img2.gray2D, window_mean_1, window_mean_2, d);
 
+#pragma omp parallel for collapse(2)   num_threads(4) schedule(static, 3)
+				for (int kj = j; kj < WIN_SIZE + j; kj++) {
 
-				for (int kj = j; kj < 9 + j; kj++) {
-					for (int ki = i - d; ki < 9 + i - d; ki++) {
+					for (int ki = i - d; ki < WIN_SIZE + i - d; ki++) {
 
 
 						k_1 += (ir[kj][ki] - window_mean_4)*(il[kj][ki + d] - window_mean_3);
@@ -388,12 +389,12 @@ int main()
 	vector<std::vector<unsigned char> > vect_3;
 	const int th = 25;
 	double diff;
-#pragma omp parallel for collapse(2)
-	for (unsigned j = 0; j < img1.height-9 ; j++) {
+#pragma omp parallel for collapse(2)   schedule(static, 3)
+	for (unsigned j = 0; j < img1.height- WIN_SIZE; j++) {
 
 		vector<unsigned char> temp_3;
 	
-		for (unsigned i = 0; i < img1.width-9 ; i++) {
+		for (unsigned i = 0; i < img1.width- WIN_SIZE; i++) {
 			diff = abs(vect[j][i] - vect_2[j][i]);
 			if (diff >= th) {
 				temp_3.push_back(0);
@@ -413,14 +414,15 @@ int main()
 	for (auto&& v : vect_3) img_disp_3.emplace_back(std::begin(v), std::end(v));
 	writeImage(img_disp_3, FILE_CROSS_CHECKED, false);
 	
+
 	//occlusion filling 
 	
-#pragma omp parallel for collapse(2)
-	for (unsigned j = 0; j < img1.height-9 ; j++) {
+#pragma omp parallel for collapse(2)   schedule(static, 3)
+	for (unsigned j = 0; j < img1.height- WIN_SIZE; j++) {
 
 		vector<unsigned char> temp_3;
 
-		for (unsigned i = 0; i < img1.width-9 ; i++) {
+		for (unsigned i = 0; i < img1.width- WIN_SIZE; i++) {
 			
 			if (vect_3[j][i] == 0) {
 				for (unsigned pj = 1; pj < 200; pj++) {
@@ -430,11 +432,11 @@ int main()
 						a[3] = vect_3[j][i + pj];
 					}
 					
-
+					/*
 					if ((i - pj) > 0) {
 						a[7] = vect_3[j][i - pj];
 					}
-					
+					*/
 					if ((j + pj)  < (img1.height-9)) {
 						a[1] = vect_3[j + pj][i];
 					}
