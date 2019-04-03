@@ -6,6 +6,9 @@
 #include <numeric>
 #include <chrono>
 #include <fstream> // To be removed later
+#include<omp.h>
+#include<stdio.h>
+
 
 // Using lodepng as png image manipulator
 #include "lodepng.h" // PNG loader 
