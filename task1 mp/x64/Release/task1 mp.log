@@ -1,15 +1,15 @@
 ﻿  task1mp.cpp
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(219): warning C4018: '<': signed/unsigned mismatch
 c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(220): warning C4018: '<': signed/unsigned mismatch
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(329): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(222): warning C4018: '<': signed/unsigned mismatch
 c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(331): warning C4018: '<': signed/unsigned mismatch
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(490): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(333): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(492): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
           with
           [
               _Ty=unsigned char
           ]
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(542): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(543): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(544): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(545): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Generating code
   1 of 610 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation

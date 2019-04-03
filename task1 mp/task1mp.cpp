@@ -161,7 +161,7 @@ int main()
 	for (auto&& v : img2.gray2D) ir.emplace_back(std::begin(v), std::end(v));
 	
 //ZNCC Algorithm img1.height-9	img1.width-9
-#pragma omp parallel for collapse(2) num_threads(10)schedule(static, 3)
+#pragma omp parallel for default(none)
 	for (unsigned j = 0; j < img1.height - WIN_SIZE; j++) {
 		vector<unsigned char> temp;
 		
@@ -215,8 +215,10 @@ int main()
 						//calcualte the ZNCC Value for each Window
 				//Zncc_value = ZNCC_formula(i, j, 9, img1.gray2D, img2.gray2D, window_mean_1, window_mean_2, d);
 
-#pragma omp parallel for collapse(2) num_threads(4)  schedule(static, 3)
-				 for (int zj = j; zj < WIN_SIZE + j; zj++) {
+
+				
+				for (int zj = j; zj < WIN_SIZE + j; zj++) {
+					
 					 for (int zi = i + d; zi < WIN_SIZE + i + d; zi++) {
 						 k += (il[zj][zi] - window_mean_1)*(ir[zj][zi - d] - window_mean_2);
 						 p += pow((il[zj][zi] - window_mean_1), 2);
