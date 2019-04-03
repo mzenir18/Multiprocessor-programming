@@ -161,7 +161,7 @@ int main()
 	for (auto&& v : img2.gray2D) ir.emplace_back(std::begin(v), std::end(v));
 	
 //ZNCC Algorithm img1.height-9	img1.width-9
-	
+#pragma omp parallel for collapse(2)
 	for (unsigned j = 0; j < img1.height - 9; j++) {
 		vector<unsigned char> temp;
 		
@@ -172,6 +172,7 @@ int main()
 
 			//best_disparity = 0;
 			//cout <<i << endl;
+
 			for (unsigned d = 0; d < 64; d++) {
 				sum_1 = 0;
 				sum_2 = 0;
@@ -214,7 +215,7 @@ int main()
 						//calcualte the ZNCC Value for each Window
 				//Zncc_value = ZNCC_formula(i, j, 9, img1.gray2D, img2.gray2D, window_mean_1, window_mean_2, d);
 
-
+				
 				 for (int zj = j; zj < 9 + j; zj++) {
 					 for (int zi = i + d; zi < 9 + i + d; zi++) {
 						 k += (il[zj][zi] - window_mean_1)*(ir[zj][zi - d] - window_mean_2);
@@ -268,7 +269,7 @@ int main()
 	}
 	//zncc2
 	exr = 0;
-	
+#pragma omp parallel for collapse(2)
 	for (unsigned j = 0; j < img1.height - 9; j++) {
 		
 		vector<unsigned char> temp_2;
@@ -387,6 +388,7 @@ int main()
 	vector<std::vector<unsigned char> > vect_3;
 	const int th = 25;
 	double diff;
+#pragma omp parallel for collapse(2)
 	for (unsigned j = 0; j < img1.height-9 ; j++) {
 
 		vector<unsigned char> temp_3;
@@ -413,7 +415,7 @@ int main()
 	
 	//occlusion filling 
 	
-	
+#pragma omp parallel for collapse(2)
 	for (unsigned j = 0; j < img1.height-9 ; j++) {
 
 		vector<unsigned char> temp_3;

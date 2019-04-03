@@ -1,0 +1,17 @@
+﻿  lodepng.cpp
+c:\users\maher\desktop\mpp git1\task1 mp\lodepng.cpp(3388): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\lodepng.cpp(4337): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  task1mp.cpp
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(218): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(219): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(328): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(329): warning C4018: '<': signed/unsigned mismatch
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(486): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=unsigned char
+          ]
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(538): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\maher\desktop\mpp git1\task1 mp\task1mp.cpp(539): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  task1 mp.vcxproj -> C:\Users\Maher\Desktop\mpp git1\x64\Debug\task1 mp.exe
